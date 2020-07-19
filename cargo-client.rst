@@ -36,8 +36,8 @@ El cliente interactivo es muy similar a un cliente FTP en linea de comando. Para
 
 .. code-block:: 
    :linenos:
-
    cargoclient --mode=client --host=<url>
+
 
 
 .. image:: client.png
