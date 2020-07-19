@@ -32,6 +32,14 @@ Modos de ejecución
 Cliente Interactivo
 ===================
 
+El cliente interactivo es muy similar a un cliente FTP en linea de comando. Para ejecutar en modo cliente basta ejecutarse de la siguiente manera:
+
+.. code-block:: 
+   :linenos:
+
+   cargoclient --mode=client --host=<url>
+
+
 .. image:: client.png
     :width: 400px
     :alt: Cargo Client Interactive
@@ -50,7 +58,7 @@ Ejecución
 .. code-block:: 
    :linenos:
 
-# cargoclient --mode=datasync --condig=nombre_archivo
+   # cargoclient --mode=datasync --condig=nombre_archivo
 
 
 Archivo de configuracíon
