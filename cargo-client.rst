@@ -98,7 +98,7 @@ Los eventos son utiles para integrar con otros sistemas. Cada vez que un evento 
 Agregar Callbacks para eventos en la configuracion
 --------------------------------------------------
 
-- **Metodos http soportados**: POST, GET, PUT, DELETE, UPDATE
+- **Metodos http soportados**: POST, GET. El método POST requiere tener el parametro de configuracion body. 
 - **Variables**: Cada evento tiene sus variables y estas se pueden utilizar tanto para armar la url como asi tambien para el cuerpo/body de la peticion
 
 .. code-block:: JSON
@@ -107,11 +107,11 @@ Agregar Callbacks para eventos en la configuracion
         "onStart": {
            "method": "POST",
            "url": "https://api.my-system.com/cargo",
-           "body": { "foo": {{ FILE_NAME }} }
+           "body": { "foo": "{{FILE_NAME}}" }
         },
         "onError": {
            "method": "GET",
-           "url": "https://api.my-system.com/cargo/{{ FILE_NAME }}",
+           "url": "https://api.my-system.com/cargo/{{FILE_NAME}}",
         }
      } 
     
