@@ -2,10 +2,6 @@
 Cliente Cargo
 #############
 
-***********
-Instalación
-***********
-
 
 **********************
 Plataformas Soportadas
@@ -22,6 +18,10 @@ Actualmente esta soportado y mantenido para las siguientes plataformas y arquite
 +-----------------------------------+------------------------+
 | Windows 7, Server 2008R2 or later | amd64, 386             |
 +-----------------------------------+------------------------+
+
+***********
+Instalación
+***********
 
 
 ******************
