@@ -55,7 +55,7 @@ Ejecución
 ---------
 
 .. note::
-   # cargoclient --mode=datasync --condig=nombre_archivo
+   # cargoclient --mode=datasync --config=nombre_archivo
 
 
 Archivo de configuracíon
