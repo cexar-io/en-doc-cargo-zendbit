@@ -31,6 +31,16 @@ Cloud
 Configuración
 *************
 
+Velocidad
+---------
+
+Puertos
+-------
+
+Directorios
+-----------
+
+
 
 ********************
 Creacion de Usuarios
