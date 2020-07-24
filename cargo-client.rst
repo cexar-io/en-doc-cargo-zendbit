@@ -32,7 +32,8 @@ Para instalar Cargo Cliente basta con descargar el instalador y seguir los pasos
 GNU/Linux
 =========
 
-.. code-block:: bash
+.. code-block:: shell
+
    # wget https://download.zendbit.com/cargoclient-v1.linux.tar.gz
    
 
