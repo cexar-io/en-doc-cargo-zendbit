@@ -34,7 +34,9 @@ GNU/Linux
 
 .. code-block:: shell
 
+   # cd /opt/
    # wget https://download.zendbit.com/cargoclient-v1.linux.tar.gz
+   # tar -vxzf cargoclient-v1.linux.tar.gz
    
 
 OSx
