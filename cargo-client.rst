@@ -23,6 +23,17 @@ Actualmente esta soportado y mantenido para las siguientes plataformas y arquite
 Instalación
 ***********
 
+Windows
+=======
+
+
+GNU/Linux
+=========
+
+
+OSx
+===
+
 
 ******************
 Modos de ejecución
