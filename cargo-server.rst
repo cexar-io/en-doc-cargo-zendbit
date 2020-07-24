@@ -24,9 +24,13 @@ Instalación
 On Premise
 ==========
 Para la instalación de la versión On Premise se requiere realizar los siguientes pasos:
+
 1. Creación y configuración del entorno de python
+
 2. Seteo del proyecto de Django
+
 3. Instalación y configuración del servidor web Apache o Nginx
+
 4. Habilitación de los puertos correspondientes en el Firewall
 
 Estas tareas deben ser realizadas por el implementador de la solución.
