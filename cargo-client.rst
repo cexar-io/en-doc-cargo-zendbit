@@ -42,6 +42,12 @@ GNU/Linux
 OSx
 ===
 
+.. code-block:: shell
+
+   # cd /opt/
+   # wget https://download.zendbit.com/cargoclient-v1.osx.tar.gz
+   # tar -vxzf cargoclient-v1.osx.tar.gz
+   
 
 ******************
 Modos de ejecución
@@ -53,7 +59,8 @@ Cliente Interactivo
 
 El cliente interactivo es muy similar a un cliente FTP en linea de comando. Para ejecutar en modo cliente basta ejecutarse de la siguiente manera:
 
-.. note::
+.. code-block:: shell
+
    # cargoclient --mode=client --host=<url>
 
 
@@ -73,7 +80,8 @@ tanto para subir archivos a una ubicacion remota como descubrir nuevos archivos 
 Ejecución
 ---------
 
-.. note::
+.. code-block:: shell
+
    # cargoclient --mode=datasync --config=nombre_archivo
 
 
