@@ -1,3 +1,9 @@
+.. image:: Zendbit.jpeg
+    :width: 400px
+    :alt: Cargo Client Interactive
+    :align: center
+
+
 Contenido
 =========
 
