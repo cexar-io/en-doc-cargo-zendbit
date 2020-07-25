@@ -95,6 +95,8 @@ El archivo de configuracion contiene la informacion necesaria para poder sincron
     {
         "sync_name": "Nombre",
         "sync_mode": "download",
+        "start_time": "10:00pm",
+        "end_time": "12:00am",
         "local_dir": "/CagoPlay/test/",
         "remote_dir": "/",
         "username": "test",
@@ -108,7 +110,11 @@ El archivo de configuracion contiene la informacion necesaria para poder sincron
 
 - **sync_name**: Texto libre que representa el nombre del trabajo
 - **sync_mode**: "download" o "upload"
+- **start_time**(Opcional): Horario en el que el trabajo empezara a enviar/recibir archivos
+- **end_time**(Opcional): Horario en el que el trabajo finalizara el envio/recepcion de archivos
+- **speed**: Velocidad que intentara negociar para enviar/recibir archivos. Se puede expresar en mbps, kbps o bps
 - **sleep**: Tiempo de espera para detectar nuevos archivos
+- **events**: Configuracion de los callbacks al inicio, actualizacion y fin o error de una transferencia.
 
 
     
