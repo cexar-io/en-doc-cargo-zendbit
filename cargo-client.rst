@@ -28,6 +28,11 @@ Windows
 
 Para instalar Cargo Cliente basta con descargar el instalador y seguir los pasos de ejecucion.
 
+.. image:: WindowsInstaller.png
+    :width: 400px
+    :alt: Cargo Client Interactive
+    :align: center
+
 
 GNU/Linux
 =========
