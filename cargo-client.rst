@@ -1,16 +1,17 @@
-#############
-Cliente Cargo
-#############
+############
+Cargo Client
+############
 
 
-**********************
-Plataformas Soportadas
-**********************
+*******************
+Supported platforms
+*******************
 
-Actualmente esta soportado y mantenido para las siguientes plataformas y arquitecturas
+It is currently supported and maintained for the following platforms and architectures
+
 
 +-----------------------------------+------------------------+
-| Sistema Operativo                 | Arquitectura           |
+| Opertive System                   | Architecture           |
 +===================================+========================+
 | Linux 2.6.23 or later with glibc  | amd64, 386, arm, arm64 |
 +-----------------------------------+------------------------+
@@ -19,14 +20,15 @@ Actualmente esta soportado y mantenido para las siguientes plataformas y arquite
 | Windows 7, Server 2008R2 or later | amd64, 386             |
 +-----------------------------------+------------------------+
 
-***********
-Instalación
-***********
+************
+Installation
+************
 
 Windows
 =======
 
-Para instalar Cargo Cliente basta con descargar el instalador y seguir los pasos de ejecucion.
+Cargo Client can be installed by downloading the installer and following the running steps.
+
 
 .. image:: WindowsInstaller.png
     :width: 400px
@@ -54,15 +56,15 @@ OSx
    # tar -vxzf cargoclient-v1.osx.tar.gz
    
 
-******************
-Modos de ejecución
-******************
+*************
+Running Modes
+*************
 
 
-Cliente Interactivo
+Interactive Client
 ===================
 
-El cliente interactivo es muy similar a un cliente FTP en linea de comando. Para ejecutar en modo cliente basta ejecutarse de la siguiente manera:
+The interactive client is very similar to a command line FTP client. The client mode is run as follows:
 
 .. code-block:: shell
 
@@ -76,29 +78,28 @@ El cliente interactivo es muy similar a un cliente FTP en linea de comando. Para
     :align: center
 
 
-Sincronizacion Automática
+Automatic Synchronization
 =========================
 
-El modo de ejecucion "Sincronizacion automatica" permite dejar a Cargo Client ejecutandose con el objectivo de sincronizar una carpeta remota con una local. El modo de sincronizacion puede 
-tanto para subir archivos a una ubicacion remota como descubrir nuevos archivos en un servidor remoto para descargargo.
+The "Automatic Synchronization" run mode allows to leave the Cargo Client running and synchronize a remote folder with a local one. The synchronization mode can either upload files to a remote location or discover new files on a remote server for downloading.
 
-Ejecución
----------
+Running
+-------
 
 .. code-block:: shell
 
    # cargoclient --mode=datasync --config=nombre_archivo
 
 
-Archivo de configuracíon
-------------------------
+Configuration File
+------------------
 
-El archivo de configuracion contiene la informacion necesaria para poder sincronizar las carpetas
+The configuration file contains the necessary information to synchronize the folders
 
 .. code-block:: JSON
 
     {
-        "sync_name": "Nombre",
+        "sync_name": "Name of the Job",
         "sync_mode": "download",
         "start_time": "10:00pm",
         "end_time": "12:00am",
@@ -113,31 +114,32 @@ El archivo de configuracion contiene la informacion necesaria para poder sincron
     }
     
 
-- **sync_name**: Texto libre que representa el nombre del trabajo
+- **sync_name**: Free text representing the name of the Job
 - **sync_mode**: "download" o "upload"
-- **start_time** (Opcional): Horario en el que el trabajo empezara a enviar/recibir archivos
-- **end_time** (Opcional): Horario en el que el trabajo finalizara el envio/recepcion de archivos
-- **speed**: Velocidad que intentara negociar para enviar/recibir archivos. Se puede expresar en mbps, kbps o bps
-- **sleep**: Tiempo de espera para detectar nuevos archivos
-- **events** (Opcional): Configuracion de los callbacks al inicio, actualizacion y fin o error de una transferencia.
+- **start_time** (Optional): Time when the job will start sending/receiving files
+- **end_time**  (Optional): Time when the job will finish sending/receiving files
+- **speed**: Speed you will try to negotiate to send/receive files. It can be expressed in mbps, kbps or bps
+- **sleep**: Timeout for detecting new files
+- **events** (Optional): Callback configuration at start, update and end or error of a transfer.
 
 
-    
-Eventos
--------
+Events
+------
 
-Los eventos son utiles para integrar con otros sistemas. Cada vez que un evento se dispara realiza la accion http especificada en la configuracion.
+Events are useful for integration with other systems. Each time an event is triggered, the http action specified in the configuration is performed.
 
-- **onStart**: Este evento se dispara el inicio de una transferencia de archivos. Variables: FILE_NAME, TRANSFER_ID, SYNC_NAME, SYNC_MODE
-- **onFinish**: Este evento se dispara al finalizar la transferencia de manera satisfactoria. Variables:FILE_NAME, TRANSFER_ID, SYNC_NAME, SYNC_MODE, AVG_SPEED, DURATION, LOST_FRAMES, AVG_RTT
-- **onError**: Este evento se dispara al finalizar la transferencia de manera no satisfactoria. Variables: FILE_NAME, TRANSFER_ID, SYNC_NAME, SYNC_MODE, ERROR
-- **onUpdate**: Este evento se dispara 1 vez por segundo durante toda la transferncia. Variables:  FILE_NAME, TRANSFER_ID, SYNC_NAME, SYNC_MODE, PROGRESS, SPEED
+- **onStart**: This event is triggered at the start of a file transfer.  Variables: FILE_NAME, TRANSFER_ID, SYNC_NAME, SYNC_MODE
+- **onFinish**: This event is triggered after the successful completion of the transfer. Variables: FILE_NAME, TRANSFER_ID, SYNC_NAME, SYNC_MODE, AVG_SPEED, DURATION, LOST_FRAMES, AVG_RTT
+- **onError**: This event is triggered after an unsuccessful transfer. Variables: FILE_NAME, TRANSFER_ID, SYNC_NAME, SYNC_MODE, ERROR
+- **onUpdate**: This event is triggered 1 time per second during the entire transfer. Variables: FILE_NAME, TRANSFER_ID, SYNC_NAME, SYNC_MODE, PROGRESS, SPEED
 
-Agregar Callbacks para eventos en la configuracion
---------------------------------------------------
 
-- **Metodos http soportados**: POST, GET. El método POST requiere tener el parametro de configuracion body. 
-- **Variables**: Cada evento tiene sus variables y estas se pueden utilizar tanto para armar la url como asi tambien para el cuerpo/body de la peticion
+Adding Callbacks for Events in the Configuration
+------------------------------------------------
+
+- **Supported http methods**: POST, GET. The POST method requires the body configuration parameter.
+- **Variables**: Each event has its own variables, which can be used to set up the url as well as the body of the request
+
 
 .. code-block:: JSON
 
